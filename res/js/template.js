@@ -7,20 +7,30 @@ const HEADER = document.querySelector('header');
 const FOOTER = document.querySelector('footer');
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // BODY.classList.add('container');
+    BODY.classList.add('grey', 'darken-4');
     MAIN.classList.add('container');
-    FOOTER.classList.add('page-footer', 'grey', 'darken-4');
+    FOOTER.classList.add('page-footer', 'grey', 'darken-3');
     HEADER.innerHTML = `
     <div class="navbar-fixed">
-        <nav class="grey darken-4">
+        <nav class="grey darken-3">
             <div class="nav-wrapper container">
-                <a href="#!" class="brand-logo"><i class="large material-icons">airplanemode_active</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                 </ul>
+                <div class="row">
+                    <a href="#!" class="brand-logo"><i class="large material-icons">airplanemode_active</i></a>
+                    <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
+
+        <ul class="sidenav" id="mobile">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+        </ul>
     </div>
     `;
     FOOTER.innerHTML = `
@@ -29,10 +39,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             <h5 class="white-text">Sitio dedicado todo aquel entusiasta de la aviación militar</h5>
         </div>
     </div>
-    <div class="footer-copyright grey darken-3">
+    <div class="footer-copyright grey darken-2">
         <div class="container">
         Desarrollado por Daniel Hernández
-        <a class="grey-text text-lighten-4 right" href="https://www.instagram.com/dnlhernandez_/" target="_blank">ig</a>
+        <a class="grey-text text-lighten-4 right" href="https://www.instagram.com/dnlhernandez_/" target="_blank"><img src="../../../sitio_aviones/res/img/icons8-instagram.svg"></a>
         <a class="grey-text text-lighten-4 right" href="https://twitter.com/dnlhernandez_" target="_blank">tw</a>
         </div>
     </div>
